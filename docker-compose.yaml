@@ -3,16 +3,11 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: "000000"
-      POSTGRES_USER: postgres
-      POSTGRES_DB: postgres
-    volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      POSTGRES_PASSWORD: "0000"
+      POSTGRES_USER: dhruvik
+      POSTGRES_DB: nodeauth
+
+  app:
+    image: nodeauth
     ports:
-      - "8080:5432"
-  web:
-    image: node-crud-git
-    depends_on:
-      - db
-    ports:
-      - "3000:3000"
+      - "13000:3000"

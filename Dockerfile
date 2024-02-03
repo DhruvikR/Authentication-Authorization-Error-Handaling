@@ -1,7 +1,7 @@
 FROM node:16
-WORKDIR /app/node-crud-git
+WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package.json .
 RUN npm install
 
 COPY . .

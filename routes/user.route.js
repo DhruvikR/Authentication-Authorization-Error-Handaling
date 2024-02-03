@@ -20,8 +20,8 @@ import {
 
 const userRouter = express.Router();
 
-userRouter.get("/", authenticateToken, authorizeAdmin, getUser);
-userRouter.post("/", authenticateToken, authorizeAdmin, createUser);
+userRouter.get("/", getUser);
+userRouter.post("/", createUser);
 userRouter.get("/getAccessFromRefresh", getAccessFromRefresh);
 userRouter.post("/login", login);
 userRouter.post("/logout", authenticateToken, logout);
